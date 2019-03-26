@@ -4,6 +4,8 @@ class XDR::Array
 
   singleton_class.send(:alias_method, :[], :new)
 
+  attr_reader :child_type
+
   def initialize(child_type, length)
     @child_type = child_type
     @length     = length
