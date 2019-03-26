@@ -4,6 +4,8 @@ class XDR::Opaque
 
   singleton_class.send(:alias_method, :[], :new)
 
+  attr_reader :length
+
   def initialize(length)
     @length = length
     @padding = padding_for length
